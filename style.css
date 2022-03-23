@@ -1,114 +1,292 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&display=swap');
-*{
-   margin: 0;
-   padding: 0;
+@font-face {
+  font-family: "Jost";
+  src: url("./fonts/Jost-Regular.woff2") format("woff2"),
+    url("./fonts/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-.header{
-    max-width: 1600px;
-    width: 100%;
-    margin: 0px auto;
-    padding: 3px 10px;
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
-    box-shadow: -1px 1px 2px 0px #e4e4e4;
-}
-li{
-    list-style: none;
-    margin: 0px 19px;
-}
-.right ul{
-       display: flex;
+@font-face {
+  font-family: "Jost* 700";
+  src: url("./fonts/Jost-Bold.woff2") format("woff2"),
+    url("./fonts/Jost-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-.right ul li a{
-  
-    text-decoration: none;
-}
-.right ul li{
-    list-style: none;
-    margin: 0px 13px;
-}
-.main_header{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    box-shadow: -1px 1px 0px 0px #e4e4e4;
+@font-face {
+  font-family: "Jost* 600 Semi";
+  src: url("./fonts/Jost-Semi.woff2") format("woff2"),
+    url("./fonts/Jost-Semi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-.left1 ul{
-    display: flex;
+@font-face {
+  font-family: "Jost* 300";
+  src: url("./fonts/Jost-Light.woff2") format("woff2"),
+    url("./fonts/Jost-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-.right1{
-    display: flex;
-    justify-content: space-between;
+@font-face {
+  font-family: "Jost* 500";
+  src: url("./fonts/Jost-Medium.woff2") format("woff2"),
+    url("./fonts/Jost-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
-.right1 ul{
-    display: flex;
-    margin-right: 37px;
-}
-.left1 ul li a{
-    text-decoration: none;
-    color: #303030;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-.right1 ul li a{
-    text-decoration: none;
-    color: #303030;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-}
-.mid img{
-    width: 155px;
-}
-.svg{
-    display: flex;
-    justify-content: space-between;
-    margin-right: -1px;
-}
-svg{
-    width: 21px;
-    margin: 0px 8px;
-    cursor: pointer;
-}
-#proheading{
-    margin-top: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-#proheading p{
-    font-family: Playfair Display, Regular;
-}
-.filters{
-      display: flex;
-    justify-content: space-between;
-    margin: 24px 45px;
-}
-div button{
-    background-color: rgb(246 246 246);
-    border: none;
-    padding: 7px 67px 8px 19px;
-    border-radius: 2px;
-    cursor: pointer;
-    
-} 
-
-.products_img{
-    margin: 0px 59px;
-    border-bottom: 1px solid #e4e4e4;
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-.products_img img{
-    width: 263px;
-    margin: 10px 10px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  max-width: 1600px;
+  width: 100%;
+  margin: -10px auto;
+  padding: -2px 90px;
+  display: flex;
+  font-family: "Jost";
+  font-weight: normal;
+  font-style: normal;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #f2f2f2;
+}
+li {
+  list-style: none;
+  margin: 0px 19px;
+}
+.right ul {
+  display: flex;
+}
+
+.right ul li a {
+  text-decoration: none;
+}
+.right ul li span {
+  padding: 0px 5px;
+  bottom: 1px;
+  position: relative;
+}
+.right ul li p {
+  display: inline;
+  padding: 0px 5px;
+  bottom: 5px;
+  position: relative;
+}
+.right ul li p img {
+  width: 8px;
+  position: absolute;
+  top: 10px;
+}
+.right ul li span p {
+  padding: 0px 5px;
+  bottom: 5px;
+  position: relative;
+}
+
+.right ul li {
+  list-style: none;
+  margin: 0px 13px;
+}
+.right ul li img {
+  width: 23px;
+}
+.main_header {
+  font-size: 16px;
+  color: #303030;
+  margin-top: 10px;
+  padding: 12px 0px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  box-shadow: 0px 5px 6px -4px #e4e4e4;
+}
+.left1 {
+  margin-left: 79px;
+}
+.mid {
+  margin: auto;
+}
+
+.left1 ul {
+  display: flex;
+}
+
+.right1 {
+  margin: -27px;
+  display: flex;
+  justify-content: space-between;
+}
+.right1 ul {
+  display: flex;
+  margin-right: 37px;
+}
+.left1 ul li a {
+  font-family: "Jost* 600 Semi";
+  font-weight: bold;
+  text-decoration: none;
+  color: #303030;
+  font-weight: 300;
+  font-size: 14px;
+}
+.right1 ul li a {
+  font-family: "Jost* 600 Semi";
+  font-weight: bold;
+  text-decoration: none;
+  color: #303030;
+  font-size: 14px;
+}
+.mid img {
+  width: 155px;
+}
+.svg {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 23px;
+}
+svg {
+  width: 21px;
+  margin: 0px 17px;
+  cursor: pointer;
+}
+#proheading {
+  margin-top: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#proheading p {
+  font-family: "Playfair Display";
+  font-size: 32px;
+}
+#proheading span {
+  color: #303030;
+  font-family: "Jost";
+  font-size: 18px;
+  margin-top: -14px;
+  opacity: 70%;
+}
+.filters {
+  /* padding: -21px; */
+  display: flex;
+  justify-content: space-around;
+  margin: 0px -78vh;
+}
+div button {
+  background-color: rgb(246 246 246);
+  border: none;
+  padding: 7px 67px 8px 19px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.products_img {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0px 59px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.products {
+  display: inline-block;
+  padding: 21px;
+  max-width: 254px;
+}
+.products svg {
+  position: relative;
+  left: 17vw;
+  top: 12vh;
+}
+.products,
+p,
+h4 {
+  padding: 0px 12px;
+}
+.products_img img {
+  width: 100%;
+  margin: 10px 10px;
+}
+
+.pagesnation {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.page {
+  margin-top: 15px;
+  margin-left: 62px;
+}
+.no_pages {
+  margin-right: 463px;
+}
+#border {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_border {
+  width: 536px;
+  height: 6px;
+  border-top: 1px solid #eae4cf;
+  border-bottom: 1px solid #eae4cf;
+}
+
+.mid_border {
+  margin: 0px 19px;
+}
+.mid_border img {
+  width: 72px;
+}
+.left_border {
+  width: 536px;
+  height: 6px;
+  border-top: 1px solid #eae4cf;
+  border-bottom: 1px solid #eae4cf;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 62px;
+  align-items: flex-start;
+  border-bottom: 1px solid #eae4cf;
+}
+
+.footer_links {
+  margin: 15px;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.footer_links h3 {
+  margin: 2px;
+  font-weight: 100;
+}
+.footer_links h3,
+p {
+  margin: 13px 0px;
+}
+
+.copyrights {
+  display: flex;
+  flex-direction: row-reverse;
 }
