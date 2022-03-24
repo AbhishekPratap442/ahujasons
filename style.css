@@ -55,19 +55,23 @@
   margin: 0;
   padding: 0;
 }
-
-.header {
+body {
+  font-family: "Jost";
   max-width: 1600px;
+}
+.header {
   width: 100%;
-  margin: -10px auto;
+  font-size: 10px;
   padding: -2px 90px;
   display: flex;
-  font-family: "Jost";
-  font-weight: normal;
-  font-style: normal;
   justify-content: space-between;
-  align-items: flex-end;
   border-bottom: 1px solid #f2f2f2;
+}
+.flag{
+  display: none;
+}
+#flags{
+  cursor: pointer;
 }
 li {
   list-style: none;
@@ -94,7 +98,7 @@ li {
 .right ul li p img {
   width: 8px;
   position: absolute;
-  top: 10px;
+  top: 2px;
 }
 .right ul li span p {
   padding: 0px 5px;
@@ -108,6 +112,7 @@ li {
 }
 .right ul li img {
   width: 23px;
+  margin: 3px -7px -2px 0px;
 }
 .main_header {
   font-size: 16px;
@@ -168,7 +173,7 @@ svg {
   cursor: pointer;
 }
 #proheading {
-  margin-top: 23px;
+  margin: 37px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,17 +184,29 @@ svg {
   font-size: 32px;
 }
 #proheading span {
+  margin-top: 3px;
   color: #303030;
-  font-family: "Jost";
   font-size: 18px;
-  margin-top: -14px;
   opacity: 70%;
 }
 .filters {
-  /* padding: -21px; */
   display: flex;
-  justify-content: space-around;
-  margin: 0px -78vh;
+  justify-content: space-between;
+  margin: -13px 10vh;
+}
+#shrot_by {
+  font-family: "Jost* 500";
+  padding: 12px 30px;
+  border-radius: 0px;
+}
+.right_filter {
+  margin-right: 20px;
+}
+.left_filter img {
+  height: 42px;
+  width: 137px;
+  margin-left: 25px;
+  cursor: pointer;
 }
 div button {
   background-color: rgb(246 246 246);
@@ -200,20 +217,34 @@ div button {
 }
 
 .products_img {
+  position: relative;
   max-width: 1600px;
   margin: auto;
-  padding: 0px 59px;
+  padding: 0px 0px 44px 59px;
   border-bottom: 1px solid #e4e4e4;
 }
 .products {
+  padding: 12px 17px;
+  position: relative;
   display: inline-block;
-  padding: 21px;
   max-width: 254px;
 }
 .products svg {
-  position: relative;
-  left: 17vw;
-  top: 12vh;
+  position: absolute;
+  right: -1px;
+  top: 65px;
+}
+.products p {
+  position: absolute;
+  margin: -18px -2px;
+  color: #4c0b36;
+}
+.products h4 {
+  position: absolute;
+  color: black;
+  font-size: 18px;
+  margin: -52px -8px;
+  left: 19px;
 }
 .products,
 p,
@@ -222,7 +253,7 @@ h4 {
 }
 .products_img img {
   width: 100%;
-  margin: 10px 10px;
+  margin: 52px 10px;
 }
 
 .pagesnation {
@@ -231,11 +262,26 @@ h4 {
   justify-content: space-between;
 }
 .page {
-  margin-top: 15px;
-  margin-left: 62px;
+  margin-top: 33px;
+  margin-left: 75px;
 }
 .no_pages {
-  margin-right: 463px;
+  margin-right: 450px;
+  margin-top: 35px;
+}
+.no_pages span {
+  font-family: "Jost";
+  font-size: 18px;
+  margin: 8px;
+  padding: 9px;
+}
+.no_pages span:last-child {
+  border: 1px solid #e4e4e4;
+}
+.no_pages span:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #4c0b36;
 }
 #border {
   margin-top: 30px;
@@ -266,27 +312,97 @@ h4 {
 .footer {
   display: flex;
   justify-content: space-evenly;
-  margin: 62px;
+  margin: 2px 0px 3px 9px;
   align-items: flex-start;
   border-bottom: 1px solid #eae4cf;
 }
 
 .footer_links {
-  margin: 15px;
+  margin: 35px;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
 }
 .footer_links h3 {
-  margin: 2px;
+  font-size: 16px;
+  margin: 6px 10px 6px 16px;
   font-weight: 100;
+  font-size: 14px;
 }
-.footer_links h3,
-p {
-  margin: 13px 0px;
+.footer_links p {
+  font-size: 14px;
+  margin: 9px 9px 3px 4px;
+  padding: 1px 0px 5px 12px;
+}
+#newsleatter {
+  padding: 7px 13px;
+  margin: 3px 0px 33px 1px;
+  font-size: 14px;
+}
+.footer_links input {
+  border: none;
+  margin: 0px -5px 27px 15px;
+
+  padding: 1px 113px 9px 0px;
+  border-bottom: 2px solid black;
+  font-size: 14px;
+  font-family: "Jost";
+}
+#subscribe {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  padding: 0px 0px 8.8px 16px;
+  cursor: pointer;
+}
+
+.follow {
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.links {
+  margin-top: 23px;
+}
+.fb {
+  width: 55px;
 }
 
 .copyrights {
-  display: flex;
-  flex-direction: row-reverse;
+  margin-top: 17px;
 }
+.hamburder_menu{
+  display: none;
+}
+#hamburger{
+  display: none;
+}
+.logo1{
+  display: none;
+}
+
+@media (max-width: 640px) { 
+.right{
+  display: none;
+}
+.main_header{
+  /* display: none; */
+}
+
+#hamburger{
+ display: inline;
+}
+.left1{
+  display: none;
+}
+.right1{
+  display: none;
+}
+.logo1{
+  display: inline;
+  width: 23px;
+}
+.logo2{
+  display: none;
+
+}
+
+ }
