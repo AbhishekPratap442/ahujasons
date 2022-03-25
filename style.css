@@ -58,19 +58,20 @@
 body {
   font-family: "Jost";
   max-width: 1600px;
+  margin: 0 auto;
 }
 .header {
   width: 100%;
   font-size: 10px;
-  padding: -2px 90px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #f2f2f2;
 }
-.flag{
+.flag {
   display: none;
 }
-#flags{
+#flags {
   cursor: pointer;
 }
 li {
@@ -79,6 +80,7 @@ li {
 }
 .right ul {
   display: flex;
+  align-items: center;
 }
 
 .right ul li a {
@@ -92,7 +94,7 @@ li {
 .right ul li p {
   display: inline;
   padding: 0px 5px;
-  bottom: 5px;
+  bottom: 3px;
   position: relative;
 }
 .right ul li p img {
@@ -120,7 +122,6 @@ li {
   margin-top: 10px;
   padding: 12px 0px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   box-shadow: 0px 5px 6px -4px #e4e4e4;
 }
@@ -173,7 +174,7 @@ svg {
   cursor: pointer;
 }
 #proheading {
-  margin: 37px 0px;
+  margin-top: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +193,7 @@ svg {
 .filters {
   display: flex;
   justify-content: space-between;
-  margin: -13px 10vh;
+  margin: auto;
 }
 #shrot_by {
   font-family: "Jost* 500";
@@ -215,19 +216,16 @@ div button {
   border-radius: 2px;
   cursor: pointer;
 }
-
 .products_img {
   position: relative;
   max-width: 1600px;
   margin: auto;
-  padding: 0px 0px 44px 59px;
+  display: flex;
+  flex-wrap: wrap;
   border-bottom: 1px solid #e4e4e4;
 }
 .products {
-  padding: 12px 17px;
-  position: relative;
-  display: inline-block;
-  max-width: 254px;
+  flex: 0 0 25%;
 }
 .products svg {
   position: absolute;
@@ -235,26 +233,11 @@ div button {
   top: 65px;
 }
 .products p {
-  position: absolute;
-  margin: -18px -2px;
+  position: relative;
+  margin: -4px 14px;
   color: #4c0b36;
 }
-.products h4 {
-  position: absolute;
-  color: black;
-  font-size: 18px;
-  margin: -52px -8px;
-  left: 19px;
-}
-.products,
-p,
-h4 {
-  padding: 0px 12px;
-}
-.products_img img {
-  width: 100%;
-  margin: 52px 10px;
-}
+
 
 .pagesnation {
   margin-top: 25px;
@@ -369,40 +352,138 @@ h4 {
 .copyrights {
   margin-top: 17px;
 }
-.hamburder_menu{
+.hamburder_menu {
   display: none;
 }
-#hamburger{
+#hamburger {
   display: none;
 }
-.logo1{
+.logo1 {
+  display: none;
+}
+.follow_email {
   display: none;
 }
 
-@media (max-width: 640px) { 
-.right{
-  display: none;
-}
-.main_header{
-  /* display: none; */
-}
+@media (max-width: 360px) {
+  .main_header {
+    z-index: 1;
+    background-color: white;
+    position: sticky;
+    top: 0;
+  }
+  .mid {
+    margin: 4px;
+  }
+  .svg {
+    margin-left: 133px;
+    margin-right: 0px;
+  }
+  svg {
+    margin: 0px 8px;
+  }
+  .mid img {
+    width: 64px;
+  }
+  #proheading p {
+    font-size: 28px;
+  }
+  .products svg {
+    right: 0px;
+  }
+  .products h4 {
+    font-size: 17px;
+   
+    left: 12px;
+  }
+  .products {
+    position: relative;
+    display: inline-block;
+    width: 46%;
+    margin: 0 2px;
+  }
+  .products_img {
+    max-width: 340px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 
-#hamburger{
- display: inline;
-}
-.left1{
-  display: none;
-}
-.right1{
-  display: none;
-}
-.logo1{
-  display: inline;
-  width: 23px;
-}
-.logo2{
-  display: none;
+    border-bottom: 0px;
+  }
+  .filters {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    background: #ff0000;
+  }
+  .right_filter {
+  }
+  .left_filter {
+    margin: 0px 3px;
+  }
+  .left_filter img {
+    height: 46px;
+    width: 184px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  #shrot_by {
+    font-family: "Jost* 500";
+    padding: 13px 39px 13px 48px;
+    border-radius: 0px;
+  }
 
-}
+  .right {
+    display: none;
+  }
+  .main_header {
+    position: sticky;
+    top: 0;
+  }
 
- }
+  #hamburger {
+    display: block;
+  }
+  .left1 {
+    display: none;
+  }
+  .right1 {
+    display: none;
+  }
+  .logo1 {
+    display: inline;
+    width: 23px;
+  }
+  .logo2 {
+    display: none;
+  }
+
+  .pagesnation {
+    margin-top: 40px;
+    display: flex;
+    /* justify-content: unset; */
+  }
+  .page {
+    margin-top: 0px;
+    margin-left: 23px;
+    margin-right: 0px;
+  }
+  .no_pages span {
+    font-family: "Jost";
+    font-size: 14px;
+    margin: -4px;
+    padding: 11px;
+  }
+  .no_pages {
+    margin: 0px 28px;
+  }
+
+  /* -------------------footer responsive------------------ */
+  .footer {
+    display: inline;
+  }
+  .follow_email {
+    display: inline;
+  }
+}

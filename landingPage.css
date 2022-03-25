@@ -1,3 +1,105 @@
+
+@font-face {
+    font-family: "Jost";
+    src: url("./fonts/Jost-Regular.woff2") format("woff2"),
+      url("./fonts/Jost-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Jost* 700";
+    src: url("./fonts/Jost-Bold.woff2") format("woff2"),
+      url("./fonts/Jost-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Jost* 600 Semi";
+    src: url("./fonts/Jost-Semi.woff2") format("woff2"),
+      url("./fonts/Jost-Semi.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Jost* 300";
+    src: url("./fonts/Jost-Light.woff2") format("woff2"),
+      url("./fonts/Jost-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Jost* 500";
+    src: url("./fonts/Jost-Medium.woff2") format("woff2"),
+      url("./fonts/Jost-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Playfair Display";
+    src: url("./fonts/PlayfairDisplay-Regular.woff2") format("woff2"),
+      url("./fonts/PlayfairDisplay-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
 .main_image{
-    background-image: url("./img/1.png");
+    margin: 3px 0px;
+}
+
+.main_image p{
+  color: #4C0B36;
+    font-family: "Playfair Display";
+    font-size: 48px;
+}
+.main_image img{
+    
+    width: 100%;
+}
+.tegline{
+    position: absolute;
+    left: 56vw;
+    top: 52vh;
+}
+.shop{
+
+  margin: 44px 21px;
+}
+.shop a{
+  padding: 0px 30px;
+  color: black;
+}
+.frame{
+  margin-top: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+.frame_left h2{
+  
+  font-family: "Playfair Display";
+  font-weight: 400;
+font-size: 50px;
+color: #4C0B36;
+}
+.frame_heading{
+  margin-top: 12vh;
+  margin-bottom: 7vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frame_left p{
+  color: #A39161;
+  width: 538px;
+  height: 170px;
 }
