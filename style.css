@@ -60,6 +60,14 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+.navMenu{
+  display: none;
+}
+.close_nav{
+  fill: white;
+  right: 0;
+  position: absolute;
+}
 .header {
   width: 100%;
   font-size: 10px;
@@ -125,9 +133,15 @@ li {
   align-items: center;
   box-shadow: 0px 5px 6px -4px #e4e4e4;
 }
+.nav_links{
+    display: none;
+}
+
+
 .left1 {
   margin-left: 79px;
 }
+
 .mid {
   margin: auto;
 }
@@ -220,17 +234,23 @@ div button {
   position: relative;
   max-width: 1600px;
   margin: auto;
+  justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid #e4e4e4;
+}
+.products_img img{
+  margin: 2px;
 }
 .products {
   flex: 0 0 25%;
 }
 .products svg {
+ 
   position: absolute;
-  right: -1px;
-  top: 65px;
+    left: 299px;
+    top: 35px;
+
 }
 .products p {
   position: relative;
@@ -322,19 +342,21 @@ div button {
   margin: 3px 0px 33px 1px;
   font-size: 14px;
 }
+.email{
+  margin-left: 13px;
+  border-bottom: 2px solid black;
+}
 .footer_links input {
   border: none;
-  margin: 0px -5px 27px 15px;
 
-  padding: 1px 113px 9px 0px;
-  border-bottom: 2px solid black;
+ 
   font-size: 14px;
   font-family: "Jost";
 }
 #subscribe {
   font-weight: bold;
-  border-bottom: 2px solid black;
-  padding: 0px 0px 8.8px 16px;
+    padding-left: 96px;
+
   cursor: pointer;
 }
 
@@ -365,12 +387,52 @@ div button {
   display: none;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .main_header {
     z-index: 1;
     background-color: white;
     position: sticky;
     top: 0;
+  }
+  .svg {
+    margin-left: 58px;
+    margin-right: 0px;
+}
+  .nav_links{
+   
+    z-index: 1;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 14vh;
+    background-color: #272727d1;
+    transform: translateX(-100vw);
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    top: 0;
+  
+    left: 0;
+   }
+  .active{
+    transform: translateX(0vw);
+   
+  }
+
+ 
+  .nav_links ul{
+          margin: 24px;
+    }
+  .nav_links ul li{
+    margin: 24px;
+  }
+  .nav_links ul li a{
+    color: white;
+    text-decoration: none;
+    
+  }
+  .navMenu{
+    display: block;
   }
   .mid {
     margin: 4px;
@@ -392,61 +454,71 @@ div button {
     right: 0px;
   }
   .products h4 {
-    font-size: 17px;
-   
-    left: 12px;
+    font-size: 14px;
+    
   }
+  
   .products {
     position: relative;
     display: inline-block;
-    width: 46%;
     margin: 0 2px;
   }
   .products_img {
-    max-width: 340px;
+  
     padding: 0;
     display: flex;
     flex-wrap: wrap;
 
     border-bottom: 0px;
   }
+  .products_img img {
+    margin: 2px;
+    max-width: 100%;
+}
+.products {
+  flex: 0 0 45%;
+}
+.products p {
+
+  margin: 7px 3px;
+
+}
+.products svg {
+  position: relative;
+  left: 35vw;
+    
+}
   .filters {
     z-index: 1;
     position: fixed;
     bottom: 0;
     margin: 0;
-    background: #ff0000;
-  }
-  .right_filter {
-  }
+     }
+ 
   .left_filter {
-    margin: 0px 3px;
-  }
+    margin: 2px 20px;
+}
   .left_filter img {
-    height: 46px;
-    width: 184px;
-    cursor: pointer;
-    margin-left: 20px;
+      margin-left: 3px;
   }
   #shrot_by {
-    font-family: "Jost* 500";
-    padding: 13px 39px 13px 48px;
-    border-radius: 0px;
+    margin: 0px 14px;
   }
-
-  .right {
+.right {
     display: none;
   }
   .main_header {
     position: sticky;
-    top: 0;
+    display: flex;
+    justify-content: space-between;
   }
-
-  #hamburger {
-    display: block;
+  
+.left1 {
+  display: none;
+    flex-direction: column;
   }
-  .left1 {
-    display: none;
+  .left1 ul{
+    flex-direction: column;
   }
   .right1 {
     display: none;
@@ -479,11 +551,21 @@ div button {
     margin: 0px 28px;
   }
 
+  #subscribe {
+   
+    padding: 0;
+}
+
   /* -------------------footer responsive------------------ */
   .footer {
     display: inline;
   }
   .follow_email {
-    display: inline;
+  
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  
   }
 }
