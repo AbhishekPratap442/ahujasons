@@ -78,8 +78,9 @@ body {
   border-bottom: 1px solid #f2f2f2;
 }
 .left{
-  margin-left: 8px;
+  padding-left: 16px;
 }
+
 .flag {
   display: none;
   position: absolute;
@@ -126,7 +127,6 @@ li {
 
 .right ul li {
   list-style: none;
-  margin: 0px 13px;
 }
 .right ul li img {
   width: 23px;
@@ -174,6 +174,9 @@ li {
   font-weight: 300;
   font-size: 14px;
 }
+.left1 ul li a img{
+  padding: 1px 3px;
+}
 .right1 ul li a {
   font-family: "Jost* 600 Semi";
   font-weight: bold;
@@ -181,13 +184,16 @@ li {
   color: #303030;
   font-size: 14px;
 }
+.right1 ul li a img{
+  padding: 1px 3px
+}
 .mid img {
   width: 155px;
 }
 .svg {
   display: flex;
   justify-content: space-between;
-  margin-right: 23px;
+
 }
 svg {
   width: 21px;
@@ -211,33 +217,67 @@ svg {
   font-size: 18px;
   opacity: 70%;
 }
+/* ----------------------------------filter-------------------------------- */
 .filters {
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  padding: 23px;
 }
 #shrot_by {
   font-family: "Jost* 500";
   padding: 12px 30px;
   border-radius: 0px;
 }
-.right_filter{
-  margin-right: 51px;
+.shrot_by_choice{
+display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid;
+  background-color: white;
+}
+.shrot_by_choice ul li{
+
+  list-style: none;
+  margin: 14px 4px;
 }
 
-.left_filter {
-  display: flex;
+.shrot_by_choice ul li a{
+  margin: 16px 6px;
+  text-decoration: none;
+  color: #303030;
+}
+.hide{
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   border: 1px solid;
-  margin-left: 4vw;
 }
-.left_filter a {
+.hide a {
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   color: black;
   padding: 0px 16px;
+}
+.hide a svg {
+  margin: 0px 7px;
+}
+.left_filter {
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  
+}
+.left_filter h3 {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  padding: 0px 16px;
+  cursor: pointer;
 }
 .left_filter a svg {
   margin: 0px 7px;
@@ -249,24 +289,56 @@ div button {
   border-radius: 2px;
   cursor: pointer;
 }
-.products_img {
-  position: relative;
-  max-width: 1600px;
-  margin: auto;
-  justify-content: space-evenly;
+.products_div{
+
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.side_filter{
+  width: 100%;
+  display: none;
+ 
+  transform: translateX(-20vw);
+  transition: all 0.5s ease-in-out;
+}
+.side_filter h3{
+  font-size: 16px;
+  font-weight: 100;
+  padding: 13px 0px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid;
+  width: 76%;
+}
+.side_filter ul li{
+  padding: 10px;
+}
+.filter_type_list{
+  display: none;
+}
+.filter_type_list_display{
+  display: block;
+}
+.products_img {
+      max-width: 1600px;
+     margin: auto;
+     display: flex;
+     padding: 23px;
 }
 .products_img img {
-  margin: 2px;
+  width: 100%;
 }
 .products {
-  flex: 0 0 25%;
+  flex: 0 0 21%;
+  position: relative;
 }
 .products svg {
-  position: relative;
-  left: 299px;
-  top: 35px;
+  top: 9px;
+  position: absolute;
+  right: 0;
 }
 .products p {
   position: relative;
@@ -276,16 +348,10 @@ div button {
 .pagesnation {
   margin-top: 25px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+align-items: center;  
 }
-.page {
-  margin-top: 33px;
-  margin-left: 75px;
-}
-.no_pages {
-  margin-right: 450px;
-  margin-top: 35px;
-}
+
 .no_pages span {
   font-family: "Jost";
   font-size: 18px;
@@ -329,13 +395,13 @@ div button {
 .footer {
   display: flex;
   justify-content: space-evenly;
-  margin: 2px 0px 3px 9px;
+  margin-top: 40px;
   align-items: flex-start;
   border-bottom: 1px solid #eae4cf;
 }
 
 .footer_links {
-  margin: 35px;
+
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -348,8 +414,7 @@ div button {
 }
 .footer_links p {
   font-size: 14px;
-  margin: 9px 9px 3px 4px;
-  padding: 1px 0px 5px 12px;
+ padding:10px 19px;
 }
 #newsleatter {
   padding: 7px 13px;
@@ -359,6 +424,16 @@ div button {
 .email {
   margin-left: 13px;
   border-bottom: 2px solid black;
+  width: 94%;
+}
+.email input{
+  border:none
+}
+
+.sign_up h3{
+  margin: 6px 10px 6px 16px;
+  font-weight: 100;
+  font-size: 14px;
 }
 .footer_links input {
   border: none;
@@ -368,7 +443,8 @@ div button {
 }
 #subscribe {
   font-weight: bold;
-  padding-left: 96px;
+  cursor: pointer;
+  float: right;
 
   cursor: pointer;
 }
@@ -376,6 +452,7 @@ div button {
 .follow {
   font-weight: bold;
   letter-spacing: 4px;
+  margin: 16px 10px;
 }
 .links {
   margin-top: 23px;
@@ -402,18 +479,25 @@ div button {
 .footer_links h3 span {
   display: none;
 }
+.filter_display {
+  display: block;
+  transform: translateX(0vw);
+}
 
 @media (max-width: 767px) {
+  .header {
+          justify-content: center;
+       }
   .main_header {
     z-index: 1;
     background-color: white;
     position: sticky;
     top: 0;
   }
-  .svg {
-    margin-left: 58px;
-    margin-right: 0px;
-  }
+  .mid {
+    margin: 0px;
+}
+  
   .gray_div {
     width: 21%;
     height: 100vh;
@@ -441,9 +525,10 @@ div button {
     margin: 24px;
   }
   .nav_links ul li {
-    margin: 40px;
+    margin: 16px 28px;
+    padding: 13px 5px;
     margin-left: 0;
-    color: white;
+    color: white
   }
   .nav_links ul li a {
     color: white;
@@ -460,21 +545,19 @@ div button {
   }
   .navMenu {
     display: block;
-    margin-left: 16px;
+
     width: 31px;
   }
-  .mid {
-    margin: 4px;
-  }
-  .svg {
-    margin-left: 133px;
-    margin-right: 0px;
-  }
+  
+  
   svg {
     margin: 0px 8px;
   }
   .mid img {
     width: 64px;
+    position: relative;
+    top: 3px;
+    left: 38px;
   }
   #proheading p {
     font-size: 28px;
@@ -489,8 +572,8 @@ div button {
   .products {
     position: relative;
     display: inline-block;
-    margin: 0 2px;
-  }
+    margin: auto;
+    }
   .products_img {
     padding: 0;
     display: flex;
@@ -509,13 +592,14 @@ div button {
     margin: 7px 3px;
   }
   .products svg {
-    position: relative;
-    left: 35vw;
+    position: absolute;
+  
   }
   .filters {
     display: flex;
+    padding: 0;
     width: 100%;
-    z-index: 1;
+       z-index: 1;
     position: fixed;
     bottom: 0;
     background-color: white;
@@ -548,6 +632,7 @@ div button {
     position: sticky;
     display: flex;
     justify-content: space-between;
+    padding: 0px 0px;
   }
 
   .left1 {
@@ -589,7 +674,8 @@ div button {
   }
 
   #subscribe {
-    padding-left: 64px;
+    padding-left: 0px;
+    float: right;
   }
   .footer_links input {
     font-size: 12px;
@@ -628,8 +714,8 @@ div button {
     margin-top: 10px;
   }
   .footer_links h3 span {
-    display: block;
-    padding-left: 72vw;
+    display: inline-block;
+    float: right;
   }
   .footer_link_heading {
     display: flex;
@@ -648,13 +734,38 @@ div button {
     margin-top: 4px;
   }
   #newsleatter {
-    padding: 18px 9px;
-    margin-top: 32px;
+    padding: 7px 0px;
     font-size: 15px;
   }
+  .footer_links {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+   
+}
   .footer_links h3 {
     border-bottom: 1px solid black;
+    display: inline;
   }
+
+  .sign_up{
+    margin: 17px;
+  }
+  .sign_up h3{
+       margin: 0;
+       font-size: 17px;
+      font-weight: bold;
+  
+  }
+  .email {
+    width: 97%;
+    margin: 0px auto;
+}
+.email input{
+  border: none;
+  padding-right: 45px;
+}
   .quick_links_para {
     display: none;
   }
@@ -665,6 +776,9 @@ div button {
     display: none;
   }
   .my_profile_para {
+    display: none;
+  }
+  .side_filter{
     display: none;
   }
   .display {

@@ -12,6 +12,17 @@ const para = document.querySelector(".para");
 const gray_div = document.querySelector(".gray_div");
 const flags = document.querySelector("#flags");
 const flag = document.querySelector(".flag");
+const side_filter = document.querySelector(".side_filter");
+const left_filter = document.querySelector('.left_filter');
+const hide = document.querySelector('.hide');
+const right_filter = document.querySelector('.right_filter')
+const shrot_by_choice= document.querySelector('.shrot_by_choice ') 
+const filter_type = document.querySelector('.filter_type');
+const filter_type_list = document.querySelector('.filter_type_list');
+
+
+
+
 
 flags.addEventListener("click", () => {
   flag.classList.toggle(".show");
@@ -42,3 +53,20 @@ myProfile.addEventListener("click", () => {
 gray_div.addEventListener("click", () => {
   nav_links.classList.toggle("active");
 });
+
+left_filter.addEventListener("click", () => {
+  
+  console.log('this is called')
+  side_filter.classList.toggle("filter_display");
+  left_filter.classList.toggle('.hide')
+});
+right_filter.addEventListener('mouseover',()=>{
+  shrot_by_choice.style.display = 'block'
+})
+right_filter.addEventListener('mouseout',()=>{
+  shrot_by_choice.style.display = 'none'
+})
+filter_type.addEventListener('click',()=>{
+  filter_type_list.classList.toggle("filter_type_list_display");
+})
+
